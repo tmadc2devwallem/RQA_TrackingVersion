@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rqa_mail_info>
+  <username>dathi</username>
+  <password>VGgzUEBzc3cwcmQ=
+R3T45632FZSL400</password>
+  <subject>Tracking Version</subject>
+  <download_folder>downloads</download_folder>
+  <rqa_pawd>dhat&amp;dhot14344</rqa_pawd>
+  <is_imap>1</is_imap>
+  <!--imap-->
+  <imap_server>imap.tma.com.vn</imap_server>
+  <imap_port>143</imap_port>
+  <imap_mail_folder>inbox</imap_mail_folder>
+  <imap_search_by>from</imap_search_by>
+  <imap_search_value>dathi@tma.com.vn</imap_search_value>
+  <imap_delete_after_read>false</imap_delete_after_read>
+  <imap_fname>db/last_uid.txt</imap_fname>
+  <!--pop3-->
+  <pop_server>pop.tma.com.vn</pop_server>
+  <pop_port>110</pop_port>
+  <pop_sent_from>teamtps@dev.com</pop_sent_from>
+  <pop_get_zip_only>false</pop_get_zip_only>
+  <pop_number_of_mails>30</pop_number_of_mails>
+  <pop_fname>db/last_tracking.txt</pop_fname>
+  <pop_expand_time>8</pop_expand_time>
+  <!-- Schedule time -->
+  <bg_timeout>50</bg_timeout>
+  <clock_track_job>5</clock_track_job>
+  <clock_clear_log>5</clock_clear_log>
+  <clock_clear_ram>3</clock_clear_ram>
+</rqa_mail_info>
