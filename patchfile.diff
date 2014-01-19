@@ -1,414 +1,3 @@
-diff --git .idea/.generators .idea/.generators
-index bc49878..5dad2b0 100644
---- .idea/.generators
-+++ .idea/.generators
-@@ -5,4 +5,4 @@ You are allowed to:
- 2. Remove generators
- 3. Add installed generators
- To add new installed generators automatically delete this file and reload the project.
----><GeneratorsGroup><Generator name="assets" /><Generator name="coffee:assets" /><Generator name="controller" /><Generator name="delayed_job" /><Generator name="delayed_job:active_record" /><Generator name="delayed_job:upgrade" /><Generator name="generator" /><Generator name="helper" /><Generator name="integration_test" /><Generator name="jquery:install" /><Generator name="js:assets" /><Generator name="mailer" /><Generator name="migration" /><Generator name="model" /><Generator name="observer" /><Generator name="performance_test" /><Generator name="resource" /><Generator name="scaffold" /><Generator name="scaffold_controller" /><Generator name="session_migration" /><Generator name="task" /><Generator name="test_unit:controller" /><Generator name="test_unit:helper" /><Generator name="test_unit:integration" /><Generator name="test_unit:mailer" /><Generator name="test_unit:model" /><Generator name="test_unit:observer" /><Generator name="test_unit:performance" /><Generator name="test_unit:plugin" /><Generator name="test_unit:scaffold" /></GeneratorsGroup></Settings>
-+--><GeneratorsGroup><Generator name="active_record:migration" /><Generator name="active_record:model" /><Generator name="active_record:observer" /><Generator name="active_record:session_migration" /><Generator name="controller" /><Generator name="erb:controller" /><Generator name="erb:mailer" /><Generator name="erb:scaffold" /><Generator name="generator" /><Generator name="helper" /><Generator name="integration_test" /><Generator name="mailer" /><Generator name="metal" /><Generator name="migration" /><Generator name="model" /><Generator name="model_subclass" /><Generator name="observer" /><Generator name="performance_test" /><Generator name="plugin" /><Generator name="resource" /><Generator name="scaffold" /><Generator name="scaffold_controller" /><Generator name="session_migration" /><Generator name="stylesheets" /><Generator name="test_unit:controller" /><Generator name="test_unit:helper" /><Generator name="test_unit:integration" /><Generator name="test_unit:mailer" /><Generator name="test_unit:model" /><Generator name="test_unit:observer" /><Generator name="test_unit:performance" /><Generator name="test_unit:plugin" /><Generator name="test_unit:scaffold" /></GeneratorsGroup></Settings>
-diff --git .idea/.rakeTasks .idea/.rakeTasks
-index dd96fdf..6be9575 100644
---- .idea/.rakeTasks
-+++ .idea/.rakeTasks
-@@ -4,4 +4,4 @@ You are allowed to:
- 1. Remove rake task
- 2. Add existing rake tasks
- To add existing rake tasks automatically delete this file and reload the project.
----><RakeGroup description="" fullCmd="" taksId="rake"><RakeTask description="List versions of all Rails frameworks and the environment" fullCmd="about" taksId="about" /><RakeGroup description="" fullCmd="" taksId="assets"><RakeTask description="Remove compiled assets" fullCmd="assets:clean" taksId="clean" /><RakeTask description="Compile all the assets named in config.assets.precompile" fullCmd="assets:precompile" taksId="precompile" /><RakeGroup description="" fullCmd="" taksId="clean"><RakeTask description="" fullCmd="assets:clean:all" taksId="all" /></RakeGroup><RakeTask description="" fullCmd="assets:environment" taksId="environment" /><RakeGroup description="" fullCmd="" taksId="precompile"><RakeTask description="" fullCmd="assets:precompile:all" taksId="all" /><RakeTask description="" fullCmd="assets:precompile:nondigest" taksId="nondigest" /><RakeTask description="" fullCmd="assets:precompile:primary" taksId="primary" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="db"><RakeTask description="Create the database from DATABASE_URL or config/database.yml for the current Rails.env (use db:create:all to create all dbs in the config)" fullCmd="db:create" taksId="create" /><RakeTask description="Drops the database using DATABASE_URL or the current Rails.env (use db:drop:all to drop all databases)" fullCmd="db:drop" taksId="drop" /><RakeGroup description="" fullCmd="" taksId="fixtures"><RakeTask description="Load fixtures into the current environment's database" fullCmd="db:fixtures:load" taksId="load" /><RakeTask description="" fullCmd="db:fixtures:identify" taksId="identify" /></RakeGroup><RakeTask description="Migrate the database (options: VERSION=x, VERBOSE=false)" fullCmd="db:migrate" taksId="migrate" /><RakeGroup description="" fullCmd="" taksId="migrate"><RakeTask description="Display status of migrations" fullCmd="db:migrate:status" taksId="status" /><RakeTask description="" fullCmd="db:migrate:down" taksId="down" /><RakeTask description="" fullCmd="db:migrate:redo" taksId="redo" /><RakeTask description="" fullCmd="db:migrate:reset" taksId="reset" /><RakeTask description="" fullCmd="db:migrate:up" taksId="up" /></RakeGroup><RakeTask description="Rolls the schema back to the previous version (specify steps w/ STEP=n)" fullCmd="db:rollback" taksId="rollback" /><RakeGroup description="" fullCmd="" taksId="schema"><RakeTask description="Create a db/schema.rb file that can be portably used against any DB supported by AR" fullCmd="db:schema:dump" taksId="dump" /><RakeTask description="Load a schema.rb file into the database" fullCmd="db:schema:load" taksId="load" /><RakeTask description="" fullCmd="db:schema:load_if_ruby" taksId="load_if_ruby" /></RakeGroup><RakeTask description="Load the seed data from db/seeds.rb" fullCmd="db:seed" taksId="seed" /><RakeTask description="Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the db first)" fullCmd="db:setup" taksId="setup" /><RakeGroup description="" fullCmd="" taksId="structure"><RakeTask description="Dump the database structure to db/structure.sql" fullCmd="db:structure:dump" taksId="dump" /><RakeTask description="" fullCmd="db:structure:load" taksId="load" /><RakeTask description="" fullCmd="db:structure:load_if_sql" taksId="load_if_sql" /></RakeGroup><RakeTask description="Retrieves the current schema version number" fullCmd="db:version" taksId="version" /><RakeTask description="" fullCmd="db:_dump" taksId="_dump" /><RakeTask description="" fullCmd="db:abort_if_pending_migrations" taksId="abort_if_pending_migrations" /><RakeTask description="" fullCmd="db:charset" taksId="charset" /><RakeTask description="" fullCmd="db:collation" taksId="collation" /><RakeGroup description="" fullCmd="" taksId="create"><RakeTask description="" fullCmd="db:create:all" taksId="all" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="drop"><RakeTask description="" fullCmd="db:drop:all" taksId="all" /></RakeGroup><RakeTask description="" fullCmd="db:forward" taksId="forward" /><RakeTask description="" fullCmd="db:load_config" taksId="load_config" /><RakeTask description="" fullCmd="db:reset" taksId="reset" /><RakeGroup description="" fullCmd="" taksId="sessions"><RakeTask description="" fullCmd="db:sessions:clear" taksId="clear" /><RakeTask description="" fullCmd="db:sessions:create" taksId="create" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="test"><RakeTask description="" fullCmd="db:test:clone" taksId="clone" /><RakeTask description="" fullCmd="db:test:clone_structure" taksId="clone_structure" /><RakeTask description="" fullCmd="db:test:load" taksId="load" /><RakeTask description="" fullCmd="db:test:load_schema" taksId="load_schema" /><RakeTask description="" fullCmd="db:test:load_structure" taksId="load_structure" /><RakeTask description="" fullCmd="db:test:prepare" taksId="prepare" /><RakeTask description="" fullCmd="db:test:purge" taksId="purge" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="doc"><RakeTask description="Generate docs for the app -- also available doc:rails, doc:guides, doc:plugins (options: TEMPLATE=/rdoc-template.rb, TITLE=&quot;Custom Title&quot;)" fullCmd="doc:app" taksId="app" /><RakeTask description="" fullCmd="doc:clobber" taksId="clobber" /><RakeTask description="" fullCmd="doc:clobber_app" taksId="clobber_app" /><RakeTask description="" fullCmd="doc:clobber_plugins" taksId="clobber_plugins" /><RakeTask description="" fullCmd="doc:clobber_rails" taksId="clobber_rails" /><RakeTask description="" fullCmd="doc:guides" taksId="guides" /><RakeTask description="" fullCmd="doc:plugins" taksId="plugins" /><RakeTask description="" fullCmd="doc:rails" taksId="rails" /><RakeTask description="" fullCmd="doc:reapp" taksId="reapp" /><RakeTask description="" fullCmd="doc:rerails" taksId="rerails" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="jobs"><RakeTask description="Exit with error status if any jobs older than max_age seconds haven't been attempted yet" fullCmd="jobs:check[max_age]" taksId="check[max_age]" /><RakeTask description="Clear the delayed_job queue" fullCmd="jobs:clear" taksId="clear" /><RakeTask description="Start a delayed_job worker" fullCmd="jobs:work" taksId="work" /><RakeTask description="Start a delayed_job worker and exit when all available jobs are complete" fullCmd="jobs:workoff" taksId="workoff" /><RakeTask description="" fullCmd="jobs:check" taksId="check" /><RakeTask description="" fullCmd="jobs:environment_options" taksId="environment_options" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="log"><RakeTask description="Truncates all *.log files in log/ to zero bytes" fullCmd="log:clear" taksId="clear" /></RakeGroup><RakeTask description="Prints out your Rack middleware stack" fullCmd="middleware" taksId="middleware" /><RakeTask description="Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)" fullCmd="notes" taksId="notes" /><RakeGroup description="" fullCmd="" taksId="notes"><RakeTask description="Enumerate a custom annotation, specify with ANNOTATION=CUSTOM" fullCmd="notes:custom" taksId="custom" /><RakeTask description="" fullCmd="notes:fixme" taksId="fixme" /><RakeTask description="" fullCmd="notes:optimize" taksId="optimize" /><RakeTask description="" fullCmd="notes:todo" taksId="todo" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="rails"><RakeTask description="Applies the template supplied by LOCATION=(/path/to/template) or URL" fullCmd="rails:template" taksId="template" /><RakeTask description="Update configs and some other initially generated files (or use just update:configs, update:scripts, or update:application_controller)" fullCmd="rails:update" taksId="update" /><RakeGroup description="" fullCmd="" taksId="templates"><RakeTask description="" fullCmd="rails:templates:copy" taksId="copy" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="update"><RakeTask description="" fullCmd="rails:update:application_controller" taksId="application_controller" /><RakeTask description="" fullCmd="rails:update:configs" taksId="configs" /><RakeTask description="" fullCmd="rails:update:scripts" taksId="scripts" /></RakeGroup></RakeGroup><RakeTask description="Print out all defined routes in match order, with names" fullCmd="routes" taksId="routes" /><RakeTask description="Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)" fullCmd="secret" taksId="secret" /><RakeTask description="Report code statistics (KLOCs, etc) from the application" fullCmd="stats" taksId="stats" /><RakeGroup description="" fullCmd="" taksId="time"><RakeGroup description="" fullCmd="" taksId="zones"><RakeTask description="Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6" fullCmd="time:zones:all" taksId="all" /><RakeTask description="" fullCmd="time:zones:local" taksId="local" /><RakeTask description="" fullCmd="time:zones:us" taksId="us" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="tmp"><RakeTask description="Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:clear)" fullCmd="tmp:clear" taksId="clear" /><RakeTask description="Creates tmp directories for sessions, cache, sockets, and pids" fullCmd="tmp:create" taksId="create" /><RakeGroup description="" fullCmd="" taksId="cache"><RakeTask description="" fullCmd="tmp:cache:clear" taksId="clear" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="pids"><RakeTask description="" fullCmd="tmp:pids:clear" taksId="clear" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="sessions"><RakeTask description="" fullCmd="tmp:sessions:clear" taksId="clear" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="sockets"><RakeTask description="" fullCmd="tmp:sockets:clear" taksId="clear" /></RakeGroup></RakeGroup><RakeTask description="" fullCmd="doc" taksId="doc" /><RakeTask description="" fullCmd="doc/api" taksId="doc/api" /><RakeTask description="" fullCmd="doc/api/index.html" taksId="doc/api/index.html" /><RakeTask description="" fullCmd="file" taksId="file" /><RakeTask description="" fullCmd="doc/app" taksId="doc/app" /><RakeTask description="" fullCmd="doc/app/index.html" taksId="doc/app/index.html" /><RakeTask description="" fullCmd="environment" taksId="environment" /><RakeTask description="" fullCmd="rails_env" taksId="rails_env" /><RakeGroup description="" fullCmd="" taksId="railties"><RakeGroup description="" fullCmd="" taksId="install"><RakeTask description="" fullCmd="railties:install:migrations" taksId="migrations" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="test"><RakeTask description="" fullCmd="test:prepare" taksId="prepare" /></RakeGroup></RakeGroup></Settings>
-+--><RakeGroup description="" fullCmd="" taksId="rake" /></Settings>
-diff --git .idea/RQA_TrackingVersion.iml .idea/RQA_TrackingVersion.iml
-index 7a851d1..017be9d 100644
---- .idea/RQA_TrackingVersion.iml
-+++ .idea/RQA_TrackingVersion.iml
-@@ -13,54 +13,58 @@
-     <content url="file://$MODULE_DIR$" />
-     <orderEntry type="inheritedJdk" />
-     <orderEntry type="sourceFolder" forTests="false" />
--    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="archive-zip (v0.6.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="clockwork (v0.7.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="delayed_job (v4.0.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="delayed_job_active_record (v4.0.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="git (v1.2.6, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rails (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.12, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.8, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.38, ruby-1.9.3-p125 (1)) [gem]" level="application" />
--    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.3.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="archive-zip (v0.6.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.3, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.4, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="clockwork (v0.7.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="delayed_job (v4.0.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="delayed_job_active_record (v4.0.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="git (v1.2.6, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.1, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rails (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.12, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.8, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.38, ruby-1.9.3-p392) [gem]" level="application" />
-+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.3.2, ruby-1.9.3-p392) [gem]" level="application" />
-+  </component>
-+  <component name="RModuleSettingsStorage">
-+    <LOAD_PATH number="0" />
-+    <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
-   </component>
- </module>
- 
-diff --git .idea/misc.xml .idea/misc.xml
-index 950dc45..897f27a 100644
---- .idea/misc.xml
-+++ .idea/misc.xml
-@@ -1,6 +1,6 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <project version="4">
--  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p125 (1)" project-jdk-type="RUBY_SDK" />
-+  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p392" project-jdk-type="RUBY_SDK" />
-   <component name="SvnBranchConfigurationManager">
-     <option name="mySupportsUserInfoFilter" value="true" />
-   </component>
-diff --git .idea/vcs.xml .idea/vcs.xml
-index 0a65a15..6953a7e 100644
---- .idea/vcs.xml
-+++ .idea/vcs.xml
-@@ -1,6 +1,7 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <project version="4">
-   <component name="VcsDirectoryMappings">
-+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-     <mapping directory="$PROJECT_DIR$" vcs="svn" />
-   </component>
- </project>
-diff --git .idea/workspace.xml .idea/workspace.xml
-index 2d68a93..3994866 100644
---- .idea/workspace.xml
-+++ .idea/workspace.xml
-@@ -1,9 +1,11 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <project version="4">
-   <component name="ChangeListManager">
--    <list default="true" id="e1b5014a-9b91-46d2-88ee-a911db2aa175" name="Default" comment="" />
-+    <list default="true" readonly="true" id="e1b5014a-9b91-46d2-88ee-a911db2aa175" name="Default" comment="" />
-     <ignored path="RQA_TrackingVersion.iws" />
-     <ignored path=".idea/workspace.xml" />
-+    <file path="/Dummy.txt" changelist="e1b5014a-9b91-46d2-88ee-a911db2aa175" time="1390112721905" ignored="false" />
-+    <file path="/main_controller.rb" changelist="e1b5014a-9b91-46d2-88ee-a911db2aa175" time="1390112961109" ignored="false" />
-     <option name="TRACKING_ENABLED" value="true" />
-     <option name="SHOW_DIALOG" value="false" />
-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
-@@ -21,6 +23,43 @@
-   <component name="FavoritesManager">
-     <favorites_list name="RQA_TrackingVersion" />
-   </component>
-+  <component name="FileEditorManager">
-+    <leaf>
-+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-+          <provider selected="true" editor-type-id="text-editor">
-+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-+              <folding />
-+            </state>
-+          </provider>
-+        </entry>
-+      </file>
-+      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
-+        <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
-+          <provider selected="true" editor-type-id="text-editor">
-+            <state line="5" column="52" selection-start="147" selection-end="147" vertical-scroll-proportion="0.23224044">
-+              <folding />
-+            </state>
-+          </provider>
-+        </entry>
-+      </file>
-+    </leaf>
-+  </component>
-+  <component name="Git.Settings">
-+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-+  </component>
-+  <component name="GitLogSettings">
-+    <option name="myDateState">
-+      <MyDateState />
-+    </option>
-+  </component>
-+  <component name="IdeDocumentHistory">
-+    <option name="changedFiles">
-+      <list>
-+        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-+      </list>
-+    </option>
-+  </component>
-   <component name="LogFilters">
-     <option name="FILTER_ERRORS" value="false" />
-     <option name="FILTER_WARNINGS" value="false" />
-@@ -31,10 +70,10 @@
-   <component name="ProjectFrameBounds">
-     <option name="x" value="-4" />
-     <option name="y" value="-4" />
--    <option name="width" value="1170" />
--    <option name="height" value="1032" />
-+    <option name="width" value="1312" />
-+    <option name="height" value="776" />
-   </component>
--  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-     <OptionsSetting value="true" id="Add" />
-     <OptionsSetting value="true" id="Remove" />
-     <OptionsSetting value="true" id="Checkout" />
-@@ -61,6 +100,7 @@
-     </navigator>
-     <panes>
-       <pane id="Scope" />
-+      <pane id="RailsProjectView" />
-       <pane id="ProjectPane">
-         <subPane>
-           <PATH>
-@@ -79,21 +119,71 @@
-               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-             </PATH_ELEMENT>
-           </PATH>
-+          <PATH>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="RQA_TrackingVersion" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="RQA_TrackingVersion" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="app" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+          </PATH>
-+          <PATH>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="RQA_TrackingVersion" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="RQA_TrackingVersion" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="app" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="controllers" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+          </PATH>
-+          <PATH>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="RQA_TrackingVersion" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="RQA_TrackingVersion" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="app" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+            <PATH_ELEMENT>
-+              <option name="myItemId" value="assets" />
-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-+            </PATH_ELEMENT>
-+          </PATH>
-         </subPane>
-       </pane>
--      <pane id="RailsProjectView" />
-     </panes>
-   </component>
-   <component name="PropertiesComponent">
-     <property name="options.splitter.main.proportions" value="0.3" />
-     <property name="WebServerToolWindowFactoryState" value="false" />
--    <property name="options.lastSelected" value="appearance" />
-     <property name="recentsLimit" value="5" />
-+    <property name="options.lastSelected" value="vcs.Git" />
-+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-     <property name="restartRequiresConfirmation" value="true" />
--    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RQA_RoR" />
--    <property name="options.searchVisible" value="true" />
--    <property name="options.splitter.details.proportions" value="0.2" />
-+    <property name="FullScreen" value="false" />
-     <property name="dynamic.classpath" value="false" />
-+    <property name="options.splitter.details.proportions" value="0.2" />
-+    <property name="options.searchVisible" value="true" />
-   </component>
-   <component name="RunManager" selected="Rails.Development: RQA_TrackingVersion">
-     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
-@@ -258,24 +348,7 @@
-     <option name="IGNORE_EXTERNALS" value="false" />
-     <configuration useDefault="false">C:\Users\phtkiet\AppData\Roaming\Subversion</configuration>
-     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
--  </component>
--  <component name="SvnFileUrlMappingImpl">
--    <option name="myMappingRoots">
--      <list>
--        <SvnCopyRootSimple>
--          <option name="myVcsRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
--          <option name="myCopyRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
--        </SvnCopyRootSimple>
--      </list>
--    </option>
--    <option name="myMoreRealMappingRoots">
--      <list>
--        <SvnCopyRootSimple>
--          <option name="myVcsRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
--          <option name="myCopyRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
--        </SvnCopyRootSimple>
--      </list>
--    </option>
-+    <supportedVersion>125</supportedVersion>
-   </component>
-   <component name="TaskManager">
-     <task active="true" id="Default" summary="Default task">
-@@ -286,27 +359,27 @@
-     <servers />
-   </component>
-   <component name="ToolWindowManager">
--    <frame x="-4" y="-4" width="1170" height="1032" extended-state="6" />
--    <editor active="false" />
-+    <frame x="-4" y="-4" width="1312" height="776" extended-state="6" />
-+    <editor active="true" />
-     <layout>
--      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
--      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
--      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
--      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6006601" order="0" side_tool="false" content_ui="combo" />
--      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
--      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
--      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933994" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
--      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
--      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26232114" sideWeight="0.6003063" order="0" side_tool="false" content_ui="combo" />
-+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39969373" sideWeight="0.76311606" order="3" side_tool="false" content_ui="tabs" />
-+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39969373" sideWeight="0.23688394" order="7" side_tool="true" content_ui="tabs" />
-+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
--      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32771823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
--      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-     </layout>
-   </component>
-   <component name="VcsContentAnnotationSettings">
-@@ -369,5 +442,28 @@
-   <component name="XDebuggerManager">
-     <breakpoint-manager />
-   </component>
-+  <component name="editorHistoryManager">
-+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-+      <provider selected="true" editor-type-id="text-editor">
-+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-+          <folding />
-+        </state>
-+      </provider>
-+    </entry>
-+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-+      <provider selected="true" editor-type-id="text-editor">
-+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-+          <folding />
-+        </state>
-+      </provider>
-+    </entry>
-+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
-+      <provider selected="true" editor-type-id="text-editor">
-+        <state line="5" column="52" selection-start="147" selection-end="147" vertical-scroll-proportion="0.23224044">
-+          <folding />
-+        </state>
-+      </provider>
-+    </entry>
-+  </component>
- </project>
- 
 diff --git app/controllers/main_controller.rb app/controllers/main_controller.rb
 index 53588f2..cc5de68 100644
 --- app/controllers/main_controller.rb
@@ -421,3 +10,431 @@ index 53588f2..cc5de68 100644
    def run
      JobHelper.track_and_store_version
  
+diff --git patchfile.diff patchfile.diff
+index ae9c223..e69de29 100644
+--- patchfile.diff
++++ patchfile.diff
+@@ -1,423 +0,0 @@
+-diff --git .idea/.generators .idea/.generators
+-index bc49878..5dad2b0 100644
+---- .idea/.generators
+-+++ .idea/.generators
+-@@ -5,4 +5,4 @@ You are allowed to:
+- 2. Remove generators
+- 3. Add installed generators
+- To add new installed generators automatically delete this file and reload the project.
+----><GeneratorsGroup><Generator name="assets" /><Generator name="coffee:assets" /><Generator name="controller" /><Generator name="delayed_job" /><Generator name="delayed_job:active_record" /><Generator name="delayed_job:upgrade" /><Generator name="generator" /><Generator name="helper" /><Generator name="integration_test" /><Generator name="jquery:install" /><Generator name="js:assets" /><Generator name="mailer" /><Generator name="migration" /><Generator name="model" /><Generator name="observer" /><Generator name="performance_test" /><Generator name="resource" /><Generator name="scaffold" /><Generator name="scaffold_controller" /><Generator name="session_migration" /><Generator name="task" /><Generator name="test_unit:controller" /><Generator name="test_unit:helper" /><Generator name="test_unit:integration" /><Generator name="test_unit:mailer" /><Generator name="test_unit:model" /><Generator name="test_unit:observer" /><Generator name="test_unit:performance" /><Generator name="test_unit:plugin" /><Generator name="test_unit:scaffold" /></GeneratorsGroup></Settings>
+-+--><GeneratorsGroup><Generator name="active_record:migration" /><Generator name="active_record:model" /><Generator name="active_record:observer" /><Generator name="active_record:session_migration" /><Generator name="controller" /><Generator name="erb:controller" /><Generator name="erb:mailer" /><Generator name="erb:scaffold" /><Generator name="generator" /><Generator name="helper" /><Generator name="integration_test" /><Generator name="mailer" /><Generator name="metal" /><Generator name="migration" /><Generator name="model" /><Generator name="model_subclass" /><Generator name="observer" /><Generator name="performance_test" /><Generator name="plugin" /><Generator name="resource" /><Generator name="scaffold" /><Generator name="scaffold_controller" /><Generator name="session_migration" /><Generator name="stylesheets" /><Generator name="test_unit:controller" /><Generator name="test_unit:helper" /><Generator name="test_unit:integration" /><Generator name="test_unit:mailer" /><Generator name="test_unit:model" /><Generator name="test_unit:observer" /><Generator name="test_unit:performance" /><Generator name="test_unit:plugin" /><Generator name="test_unit:scaffold" /></GeneratorsGroup></Settings>
+-diff --git .idea/.rakeTasks .idea/.rakeTasks
+-index dd96fdf..6be9575 100644
+---- .idea/.rakeTasks
+-+++ .idea/.rakeTasks
+-@@ -4,4 +4,4 @@ You are allowed to:
+- 1. Remove rake task
+- 2. Add existing rake tasks
+- To add existing rake tasks automatically delete this file and reload the project.
+----><RakeGroup description="" fullCmd="" taksId="rake"><RakeTask description="List versions of all Rails frameworks and the environment" fullCmd="about" taksId="about" /><RakeGroup description="" fullCmd="" taksId="assets"><RakeTask description="Remove compiled assets" fullCmd="assets:clean" taksId="clean" /><RakeTask description="Compile all the assets named in config.assets.precompile" fullCmd="assets:precompile" taksId="precompile" /><RakeGroup description="" fullCmd="" taksId="clean"><RakeTask description="" fullCmd="assets:clean:all" taksId="all" /></RakeGroup><RakeTask description="" fullCmd="assets:environment" taksId="environment" /><RakeGroup description="" fullCmd="" taksId="precompile"><RakeTask description="" fullCmd="assets:precompile:all" taksId="all" /><RakeTask description="" fullCmd="assets:precompile:nondigest" taksId="nondigest" /><RakeTask description="" fullCmd="assets:precompile:primary" taksId="primary" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="db"><RakeTask description="Create the database from DATABASE_URL or config/database.yml for the current Rails.env (use db:create:all to create all dbs in the config)" fullCmd="db:create" taksId="create" /><RakeTask description="Drops the database using DATABASE_URL or the current Rails.env (use db:drop:all to drop all databases)" fullCmd="db:drop" taksId="drop" /><RakeGroup description="" fullCmd="" taksId="fixtures"><RakeTask description="Load fixtures into the current environment's database" fullCmd="db:fixtures:load" taksId="load" /><RakeTask description="" fullCmd="db:fixtures:identify" taksId="identify" /></RakeGroup><RakeTask description="Migrate the database (options: VERSION=x, VERBOSE=false)" fullCmd="db:migrate" taksId="migrate" /><RakeGroup description="" fullCmd="" taksId="migrate"><RakeTask description="Display status of migrations" fullCmd="db:migrate:status" taksId="status" /><RakeTask description="" fullCmd="db:migrate:down" taksId="down" /><RakeTask description="" fullCmd="db:migrate:redo" taksId="redo" /><RakeTask description="" fullCmd="db:migrate:reset" taksId="reset" /><RakeTask description="" fullCmd="db:migrate:up" taksId="up" /></RakeGroup><RakeTask description="Rolls the schema back to the previous version (specify steps w/ STEP=n)" fullCmd="db:rollback" taksId="rollback" /><RakeGroup description="" fullCmd="" taksId="schema"><RakeTask description="Create a db/schema.rb file that can be portably used against any DB supported by AR" fullCmd="db:schema:dump" taksId="dump" /><RakeTask description="Load a schema.rb file into the database" fullCmd="db:schema:load" taksId="load" /><RakeTask description="" fullCmd="db:schema:load_if_ruby" taksId="load_if_ruby" /></RakeGroup><RakeTask description="Load the seed data from db/seeds.rb" fullCmd="db:seed" taksId="seed" /><RakeTask description="Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the db first)" fullCmd="db:setup" taksId="setup" /><RakeGroup description="" fullCmd="" taksId="structure"><RakeTask description="Dump the database structure to db/structure.sql" fullCmd="db:structure:dump" taksId="dump" /><RakeTask description="" fullCmd="db:structure:load" taksId="load" /><RakeTask description="" fullCmd="db:structure:load_if_sql" taksId="load_if_sql" /></RakeGroup><RakeTask description="Retrieves the current schema version number" fullCmd="db:version" taksId="version" /><RakeTask description="" fullCmd="db:_dump" taksId="_dump" /><RakeTask description="" fullCmd="db:abort_if_pending_migrations" taksId="abort_if_pending_migrations" /><RakeTask description="" fullCmd="db:charset" taksId="charset" /><RakeTask description="" fullCmd="db:collation" taksId="collation" /><RakeGroup description="" fullCmd="" taksId="create"><RakeTask description="" fullCmd="db:create:all" taksId="all" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="drop"><RakeTask description="" fullCmd="db:drop:all" taksId="all" /></RakeGroup><RakeTask description="" fullCmd="db:forward" taksId="forward" /><RakeTask description="" fullCmd="db:load_config" taksId="load_config" /><RakeTask description="" fullCmd="db:reset" taksId="reset" /><RakeGroup description="" fullCmd="" taksId="sessions"><RakeTask description="" fullCmd="db:sessions:clear" taksId="clear" /><RakeTask description="" fullCmd="db:sessions:create" taksId="create" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="test"><RakeTask description="" fullCmd="db:test:clone" taksId="clone" /><RakeTask description="" fullCmd="db:test:clone_structure" taksId="clone_structure" /><RakeTask description="" fullCmd="db:test:load" taksId="load" /><RakeTask description="" fullCmd="db:test:load_schema" taksId="load_schema" /><RakeTask description="" fullCmd="db:test:load_structure" taksId="load_structure" /><RakeTask description="" fullCmd="db:test:prepare" taksId="prepare" /><RakeTask description="" fullCmd="db:test:purge" taksId="purge" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="doc"><RakeTask description="Generate docs for the app -- also available doc:rails, doc:guides, doc:plugins (options: TEMPLATE=/rdoc-template.rb, TITLE=&quot;Custom Title&quot;)" fullCmd="doc:app" taksId="app" /><RakeTask description="" fullCmd="doc:clobber" taksId="clobber" /><RakeTask description="" fullCmd="doc:clobber_app" taksId="clobber_app" /><RakeTask description="" fullCmd="doc:clobber_plugins" taksId="clobber_plugins" /><RakeTask description="" fullCmd="doc:clobber_rails" taksId="clobber_rails" /><RakeTask description="" fullCmd="doc:guides" taksId="guides" /><RakeTask description="" fullCmd="doc:plugins" taksId="plugins" /><RakeTask description="" fullCmd="doc:rails" taksId="rails" /><RakeTask description="" fullCmd="doc:reapp" taksId="reapp" /><RakeTask description="" fullCmd="doc:rerails" taksId="rerails" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="jobs"><RakeTask description="Exit with error status if any jobs older than max_age seconds haven't been attempted yet" fullCmd="jobs:check[max_age]" taksId="check[max_age]" /><RakeTask description="Clear the delayed_job queue" fullCmd="jobs:clear" taksId="clear" /><RakeTask description="Start a delayed_job worker" fullCmd="jobs:work" taksId="work" /><RakeTask description="Start a delayed_job worker and exit when all available jobs are complete" fullCmd="jobs:workoff" taksId="workoff" /><RakeTask description="" fullCmd="jobs:check" taksId="check" /><RakeTask description="" fullCmd="jobs:environment_options" taksId="environment_options" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="log"><RakeTask description="Truncates all *.log files in log/ to zero bytes" fullCmd="log:clear" taksId="clear" /></RakeGroup><RakeTask description="Prints out your Rack middleware stack" fullCmd="middleware" taksId="middleware" /><RakeTask description="Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)" fullCmd="notes" taksId="notes" /><RakeGroup description="" fullCmd="" taksId="notes"><RakeTask description="Enumerate a custom annotation, specify with ANNOTATION=CUSTOM" fullCmd="notes:custom" taksId="custom" /><RakeTask description="" fullCmd="notes:fixme" taksId="fixme" /><RakeTask description="" fullCmd="notes:optimize" taksId="optimize" /><RakeTask description="" fullCmd="notes:todo" taksId="todo" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="rails"><RakeTask description="Applies the template supplied by LOCATION=(/path/to/template) or URL" fullCmd="rails:template" taksId="template" /><RakeTask description="Update configs and some other initially generated files (or use just update:configs, update:scripts, or update:application_controller)" fullCmd="rails:update" taksId="update" /><RakeGroup description="" fullCmd="" taksId="templates"><RakeTask description="" fullCmd="rails:templates:copy" taksId="copy" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="update"><RakeTask description="" fullCmd="rails:update:application_controller" taksId="application_controller" /><RakeTask description="" fullCmd="rails:update:configs" taksId="configs" /><RakeTask description="" fullCmd="rails:update:scripts" taksId="scripts" /></RakeGroup></RakeGroup><RakeTask description="Print out all defined routes in match order, with names" fullCmd="routes" taksId="routes" /><RakeTask description="Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)" fullCmd="secret" taksId="secret" /><RakeTask description="Report code statistics (KLOCs, etc) from the application" fullCmd="stats" taksId="stats" /><RakeGroup description="" fullCmd="" taksId="time"><RakeGroup description="" fullCmd="" taksId="zones"><RakeTask description="Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6" fullCmd="time:zones:all" taksId="all" /><RakeTask description="" fullCmd="time:zones:local" taksId="local" /><RakeTask description="" fullCmd="time:zones:us" taksId="us" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="tmp"><RakeTask description="Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:clear)" fullCmd="tmp:clear" taksId="clear" /><RakeTask description="Creates tmp directories for sessions, cache, sockets, and pids" fullCmd="tmp:create" taksId="create" /><RakeGroup description="" fullCmd="" taksId="cache"><RakeTask description="" fullCmd="tmp:cache:clear" taksId="clear" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="pids"><RakeTask description="" fullCmd="tmp:pids:clear" taksId="clear" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="sessions"><RakeTask description="" fullCmd="tmp:sessions:clear" taksId="clear" /></RakeGroup><RakeGroup description="" fullCmd="" taksId="sockets"><RakeTask description="" fullCmd="tmp:sockets:clear" taksId="clear" /></RakeGroup></RakeGroup><RakeTask description="" fullCmd="doc" taksId="doc" /><RakeTask description="" fullCmd="doc/api" taksId="doc/api" /><RakeTask description="" fullCmd="doc/api/index.html" taksId="doc/api/index.html" /><RakeTask description="" fullCmd="file" taksId="file" /><RakeTask description="" fullCmd="doc/app" taksId="doc/app" /><RakeTask description="" fullCmd="doc/app/index.html" taksId="doc/app/index.html" /><RakeTask description="" fullCmd="environment" taksId="environment" /><RakeTask description="" fullCmd="rails_env" taksId="rails_env" /><RakeGroup description="" fullCmd="" taksId="railties"><RakeGroup description="" fullCmd="" taksId="install"><RakeTask description="" fullCmd="railties:install:migrations" taksId="migrations" /></RakeGroup></RakeGroup><RakeGroup description="" fullCmd="" taksId="test"><RakeTask description="" fullCmd="test:prepare" taksId="prepare" /></RakeGroup></RakeGroup></Settings>
+-+--><RakeGroup description="" fullCmd="" taksId="rake" /></Settings>
+-diff --git .idea/RQA_TrackingVersion.iml .idea/RQA_TrackingVersion.iml
+-index 7a851d1..017be9d 100644
+---- .idea/RQA_TrackingVersion.iml
+-+++ .idea/RQA_TrackingVersion.iml
+-@@ -13,54 +13,58 @@
+-     <content url="file://$MODULE_DIR$" />
+-     <orderEntry type="inheritedJdk" />
+-     <orderEntry type="sourceFolder" forTests="false" />
+--    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="archive-zip (v0.6.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="clockwork (v0.7.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="delayed_job (v4.0.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="delayed_job_active_record (v4.0.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="git (v1.2.6, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rails (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.13, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.12, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.8, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.38, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+--    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.3.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="archive-zip (v0.6.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.3, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.4, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="clockwork (v0.7.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="delayed_job (v4.0.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="delayed_job_active_record (v4.0.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="git (v1.2.6, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.1, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rails (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.12, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.8, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.38, ruby-1.9.3-p392) [gem]" level="application" />
+-+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.3.2, ruby-1.9.3-p392) [gem]" level="application" />
+-+  </component>
+-+  <component name="RModuleSettingsStorage">
+-+    <LOAD_PATH number="0" />
+-+    <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
+-   </component>
+- </module>
+- 
+-diff --git .idea/misc.xml .idea/misc.xml
+-index 950dc45..897f27a 100644
+---- .idea/misc.xml
+-+++ .idea/misc.xml
+-@@ -1,6 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+--  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p125 (1)" project-jdk-type="RUBY_SDK" />
+-+  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p392" project-jdk-type="RUBY_SDK" />
+-   <component name="SvnBranchConfigurationManager">
+-     <option name="mySupportsUserInfoFilter" value="true" />
+-   </component>
+-diff --git .idea/vcs.xml .idea/vcs.xml
+-index 0a65a15..6953a7e 100644
+---- .idea/vcs.xml
+-+++ .idea/vcs.xml
+-@@ -1,6 +1,7 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+-   <component name="VcsDirectoryMappings">
+-+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-     <mapping directory="$PROJECT_DIR$" vcs="svn" />
+-   </component>
+- </project>
+-diff --git .idea/workspace.xml .idea/workspace.xml
+-index 2d68a93..3994866 100644
+---- .idea/workspace.xml
+-+++ .idea/workspace.xml
+-@@ -1,9 +1,11 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+-   <component name="ChangeListManager">
+--    <list default="true" id="e1b5014a-9b91-46d2-88ee-a911db2aa175" name="Default" comment="" />
+-+    <list default="true" readonly="true" id="e1b5014a-9b91-46d2-88ee-a911db2aa175" name="Default" comment="" />
+-     <ignored path="RQA_TrackingVersion.iws" />
+-     <ignored path=".idea/workspace.xml" />
+-+    <file path="/Dummy.txt" changelist="e1b5014a-9b91-46d2-88ee-a911db2aa175" time="1390112721905" ignored="false" />
+-+    <file path="/main_controller.rb" changelist="e1b5014a-9b91-46d2-88ee-a911db2aa175" time="1390112961109" ignored="false" />
+-     <option name="TRACKING_ENABLED" value="true" />
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -21,6 +23,43 @@
+-   <component name="FavoritesManager">
+-     <favorites_list name="RQA_TrackingVersion" />
+-   </component>
+-+  <component name="FileEditorManager">
+-+    <leaf>
+-+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+-+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+-+          <provider selected="true" editor-type-id="text-editor">
+-+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+-+              <folding />
+-+            </state>
+-+          </provider>
+-+        </entry>
+-+      </file>
+-+      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
+-+        <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+-+          <provider selected="true" editor-type-id="text-editor">
+-+            <state line="5" column="52" selection-start="147" selection-end="147" vertical-scroll-proportion="0.23224044">
+-+              <folding />
+-+            </state>
+-+          </provider>
+-+        </entry>
+-+      </file>
+-+    </leaf>
+-+  </component>
+-+  <component name="Git.Settings">
+-+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-+  </component>
+-+  <component name="GitLogSettings">
+-+    <option name="myDateState">
+-+      <MyDateState />
+-+    </option>
+-+  </component>
+-+  <component name="IdeDocumentHistory">
+-+    <option name="changedFiles">
+-+      <list>
+-+        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
+-+      </list>
+-+    </option>
+-+  </component>
+-   <component name="LogFilters">
+-     <option name="FILTER_ERRORS" value="false" />
+-     <option name="FILTER_WARNINGS" value="false" />
+-@@ -31,10 +70,10 @@
+-   <component name="ProjectFrameBounds">
+-     <option name="x" value="-4" />
+-     <option name="y" value="-4" />
+--    <option name="width" value="1170" />
+--    <option name="height" value="1032" />
+-+    <option name="width" value="1312" />
+-+    <option name="height" value="776" />
+-   </component>
+--  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+-+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-     <OptionsSetting value="true" id="Add" />
+-     <OptionsSetting value="true" id="Remove" />
+-     <OptionsSetting value="true" id="Checkout" />
+-@@ -61,6 +100,7 @@
+-     </navigator>
+-     <panes>
+-       <pane id="Scope" />
+-+      <pane id="RailsProjectView" />
+-       <pane id="ProjectPane">
+-         <subPane>
+-           <PATH>
+-@@ -79,21 +119,71 @@
+-               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-             </PATH_ELEMENT>
+-           </PATH>
+-+          <PATH>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="RQA_TrackingVersion" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="RQA_TrackingVersion" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="app" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+          </PATH>
+-+          <PATH>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="RQA_TrackingVersion" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="RQA_TrackingVersion" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="app" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="controllers" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+          </PATH>
+-+          <PATH>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="RQA_TrackingVersion" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="RQA_TrackingVersion" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="app" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+            <PATH_ELEMENT>
+-+              <option name="myItemId" value="assets" />
+-+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-+            </PATH_ELEMENT>
+-+          </PATH>
+-         </subPane>
+-       </pane>
+--      <pane id="RailsProjectView" />
+-     </panes>
+-   </component>
+-   <component name="PropertiesComponent">
+-     <property name="options.splitter.main.proportions" value="0.3" />
+-     <property name="WebServerToolWindowFactoryState" value="false" />
+--    <property name="options.lastSelected" value="appearance" />
+-     <property name="recentsLimit" value="5" />
+-+    <property name="options.lastSelected" value="vcs.Git" />
+-+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+-     <property name="restartRequiresConfirmation" value="true" />
+--    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RQA_RoR" />
+--    <property name="options.searchVisible" value="true" />
+--    <property name="options.splitter.details.proportions" value="0.2" />
+-+    <property name="FullScreen" value="false" />
+-     <property name="dynamic.classpath" value="false" />
+-+    <property name="options.splitter.details.proportions" value="0.2" />
+-+    <property name="options.searchVisible" value="true" />
+-   </component>
+-   <component name="RunManager" selected="Rails.Development: RQA_TrackingVersion">
+-     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+-@@ -258,24 +348,7 @@
+-     <option name="IGNORE_EXTERNALS" value="false" />
+-     <configuration useDefault="false">C:\Users\phtkiet\AppData\Roaming\Subversion</configuration>
+-     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+--  </component>
+--  <component name="SvnFileUrlMappingImpl">
+--    <option name="myMappingRoots">
+--      <list>
+--        <SvnCopyRootSimple>
+--          <option name="myVcsRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
+--          <option name="myCopyRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
+--        </SvnCopyRootSimple>
+--      </list>
+--    </option>
+--    <option name="myMoreRealMappingRoots">
+--      <list>
+--        <SvnCopyRootSimple>
+--          <option name="myVcsRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
+--          <option name="myCopyRoot" value="F:\Wallem Project Source\Projects\RQA_TrackingVersion" />
+--        </SvnCopyRootSimple>
+--      </list>
+--    </option>
+-+    <supportedVersion>125</supportedVersion>
+-   </component>
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+-@@ -286,27 +359,27 @@
+-     <servers />
+-   </component>
+-   <component name="ToolWindowManager">
+--    <frame x="-4" y="-4" width="1170" height="1032" extended-state="6" />
+--    <editor active="false" />
+-+    <frame x="-4" y="-4" width="1312" height="776" extended-state="6" />
+-+    <editor active="true" />
+-     <layout>
+--      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+--      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+--      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+--      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6006601" order="0" side_tool="false" content_ui="combo" />
+--      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+--      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+--      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933994" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+--      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+--      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26232114" sideWeight="0.6003063" order="0" side_tool="false" content_ui="combo" />
+-+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39969373" sideWeight="0.76311606" order="3" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+-+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39969373" sideWeight="0.23688394" order="7" side_tool="true" content_ui="tabs" />
+-+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+-       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+--      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+-       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+-+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32771823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+--      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+-       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+-+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+-     </layout>
+-   </component>
+-   <component name="VcsContentAnnotationSettings">
+-@@ -369,5 +442,28 @@
+-   <component name="XDebuggerManager">
+-     <breakpoint-manager />
+-   </component>
+-+  <component name="editorHistoryManager">
+-+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+-+      <provider selected="true" editor-type-id="text-editor">
+-+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+-+          <folding />
+-+        </state>
+-+      </provider>
+-+    </entry>
+-+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+-+      <provider selected="true" editor-type-id="text-editor">
+-+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+-+          <folding />
+-+        </state>
+-+      </provider>
+-+    </entry>
+-+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+-+      <provider selected="true" editor-type-id="text-editor">
+-+        <state line="5" column="52" selection-start="147" selection-end="147" vertical-scroll-proportion="0.23224044">
+-+          <folding />
+-+        </state>
+-+      </provider>
+-+    </entry>
+-+  </component>
+- </project>
+- 
+-diff --git app/controllers/main_controller.rb app/controllers/main_controller.rb
+-index 53588f2..cc5de68 100644
+---- app/controllers/main_controller.rb
+-+++ app/controllers/main_controller.rb
+-@@ -3,6 +3,7 @@ class MainController < ApplicationController
+-   ## dathi
+-   ## Tracking version
+-   ## SHORE SIDE
+-+  ## responsible for showing data received from Ship
+-   def run
+-     JobHelper.track_and_store_version
+- 
